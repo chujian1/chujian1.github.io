@@ -15,7 +15,7 @@
 <meta property="og:site_name" content="初见_1">
 <meta property="og:description" content="基本命令git init : 把当前这个目录改为Git可以管理的仓库git add &amp;lt;文件名&amp;gt; : 添加文件(实际上就是把文件添加到暂存区)git add -A : 添加全部文件到缓存区git commit -m &amp;quot;本次提交的说明&amp;quot; : 将文件提交到仓库(实际上就是把暂存区的所有内容提交到当前分支)git status : 查看仓库当前状态git diff : 查看">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2017-12-10T13:49:10.410Z">
+<meta property="og:updated_time" content="2017-12-10T13:57:33.512Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="入门-git">
 <meta name="twitter:description" content="基本命令git init : 把当前这个目录改为Git可以管理的仓库git add &amp;lt;文件名&amp;gt; : 添加文件(实际上就是把文件添加到暂存区)git add -A : 添加全部文件到缓存区git commit -m &amp;quot;本次提交的说明&amp;quot; : 将文件提交到仓库(实际上就是把暂存区的所有内容提交到当前分支)git status : 查看仓库当前状态git diff : 查看">
@@ -175,6 +175,7 @@
     <div class="article-entry" itemprop="articleBody">
       
         <h2 id="基本命令"><a href="#基本命令" class="headerlink" title="基本命令"></a>基本命令</h2><p><code>git init</code> : 把当前这个目录改为Git可以管理的仓库<br><code>git add &lt;文件名&gt;</code> : 添加文件(实际上就是把文件添加到暂存区)<br><code>git add -A</code> : 添加全部文件到缓存区<br><code>git commit -m &quot;本次提交的说明&quot;</code> : 将文件提交到仓库(实际上就是把暂存区的所有内容提交到当前分支)<br><code>git status</code> : 查看仓库当前状态<br><code>git diff</code> : 查看具体修改了什么内容<br><code>git log</code> : 显示从最近到最远的提交日志<br><code>git remote add origin git@github.com:用户名/仓库名.git</code> 或者<code>git remote add origin https://github.com/用户名/仓库名.git</code>: 关联一个远程库<br><code>git push -u origin master</code> : 第一次推送内容到github上<br><code>git push origin master</code> : 此后推送最新修改内容<br><code>git clone git@github.com:用户名/仓库名.git</code> : 从远程库克隆一个本地库<br><code>git branch</code> : 查看当前分支，会列出所有分支，当前分支前面会标一个*号<br><code>git branch -a</code> : 查看远程分支<br><code>git branch &lt;name&gt;</code> : 创建分支<br><code>git checkout &lt;name&gt;</code> : 切换分支<br><code>git checkout -b &lt;name&gt;</code> : 创建+切换分支<br><code>git merge &lt;name&gt;</code> : 合并某分支到当前分支（使用的是Fast forward模式合并，合并之后看不出曾经合并过）<br><code>git merge --no-ff -m &quot;提交说明&quot; &lt;分支&gt;</code> ： 普通模式合并，合并后的历史有分支，能看的出曾经做过合并<br><code>git log --graph</code> : 可以看到分支合并图<br><code>git branch -d &lt;name&gt;</code>: 删除分支<br>bug分支：<br><code>git stash</code> : 将当前分支的工作现场“储存”起来，等以后恢复现场后继续工作<br><code>git stash list</code> : 查看储存的工作现场<br><code>git stash apply</code> : 恢复工作现场，但stash内容并不删除<br><code>git stash apply stash@{0}</code> : 进行多次git stash后，通过git stash list 查看stash内容，恢复指定的stash某一项<br><code>git stash drop</code> : 删除stash内容<br><code>git stash pop</code> : 恢复的同时删除stash内容<br>feature分支：<br><code>git branch -D &lt;name&gt;</code> : 强行删除一个未被合并过的分支<br>团队合作时：<br><code>git checkout -b dev origin/dev</code> : 在本地创建和远程分支对应的分支<br><code>git pull</code> : 多人同时创建了多个dev分支经过更改后想要提交到远程，需要用此命令将其他人提交的master/dev pull到本地，在本地合并，解决冲突，再推送<br><code>git branch --set-upstream dev origin/dev</code> : 若是git pull 失败，是因为没有指定本地dev分支与远程origin/dev分支的链接，根据提示例如此代码进行链接，然后再pull（建立本地分支与远程分支的关联）<br><code>git remote -v</code> ： 查看远程库信息</p>
+<p><a href="https://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000" target="_blank" rel="noopener">参考链接</a></p>
 
       
 
