@@ -8,14 +8,19 @@
   <link rel="dns-prefetch" href="http://chujian1.github.io">
   <title>MYSQL 安装与卸载 | 初见_1</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="article">
+  <meta name="description" content="卸载就是简单的四条命令sudo rm /var/lib/mysql/ -Rsudo rm /etc/mysql/ -Rsudo apt-get autoremove mysql* --purgesudo apt-get remove apparmor 安装 终端输入命令sudo netstat -tap | grep mysql检测是否已经安装好mysql若无反应，则进行以下步骤 sudo apt">
+<meta property="og:type" content="article">
 <meta property="og:title" content="MYSQL 安装与卸载">
 <meta property="og:url" content="http://chujian1.github.io/2017/12/27/MYSQL-安装与卸载/index.html">
 <meta property="og:site_name" content="初见_1">
+<meta property="og:description" content="卸载就是简单的四条命令sudo rm /var/lib/mysql/ -Rsudo rm /etc/mysql/ -Rsudo apt-get autoremove mysql* --purgesudo apt-get remove apparmor 安装 终端输入命令sudo netstat -tap | grep mysql检测是否已经安装好mysql若无反应，则进行以下步骤 sudo apt">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2017-12-27T12:13:53.771Z">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/5678062-13b2b9c55e82eb1d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:updated_time" content="2017-12-27T13:16:50.006Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="MYSQL 安装与卸载">
+<meta name="twitter:description" content="卸载就是简单的四条命令sudo rm /var/lib/mysql/ -Rsudo rm /etc/mysql/ -Rsudo apt-get autoremove mysql* --purgesudo apt-get remove apparmor 安装 终端输入命令sudo netstat -tap | grep mysql检测是否已经安装好mysql若无反应，则进行以下步骤 sudo apt">
+<meta name="twitter:image" content="http://upload-images.jianshu.io/upload_images/5678062-13b2b9c55e82eb1d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
   
     <link rel="alternative" href="/atom.xml" title="初见_1" type="application/atom+xml">
   
@@ -171,7 +176,15 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        
+        <h4 id="卸载"><a href="#卸载" class="headerlink" title="卸载"></a>卸载</h4><p><em>就是简单的四条命令</em><br><code>sudo rm /var/lib/mysql/ -R</code><br><code>sudo rm /etc/mysql/ -R</code><br><code>sudo apt-get autoremove mysql* --purge</code><br><code>sudo apt-get remove apparmor</code></p>
+<h4 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h4><ul>
+<li>终端输入命令<code>sudo netstat -tap | grep mysql</code>检测是否已经安装好mysql<br><img src="http://upload-images.jianshu.io/upload_images/5678062-13b2b9c55e82eb1d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="mysql已安装.png"><br><em>若无反应，则进行以下步骤</em></li>
+<li><code>sudo apt-get install mysql-server mysql-client</code><br>期间会提示输入root密码</li>
+<li>再次使用<code>sudo netstat -tap | grep mysql</code>命令检测是否安装成功</li>
+<li>登录mysql<code>mysql -u root -p</code>然后输入密码即可进入</li>
+<li>退出<code>exit</code>回车</li>
+</ul>
+
       
 
       
