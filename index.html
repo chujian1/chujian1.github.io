@@ -152,6 +152,96 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-Ubuntu下配置jdk" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/01/05/Ubuntu下配置jdk/">Ubuntu下配置jdk</a>
+    </h1>
+  
+
+        
+        <a href="/2018/01/05/Ubuntu下配置jdk/" class="archive-article-date">
+  	<time datetime="2018-01-05T12:04:52.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-01-05</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <ol>
+<li>首先需要先去下载jdk压缩包</li>
+<li>解压安装</li>
+</ol>
+<ul>
+<li>将jdk安装到这个路径：/usr/lib/jvm。如果没有这个目录，就新建一个目录<br><code>cd /usr/lib</code><br><code>sudo mkdir jvm</code></li>
+<li>建立好之后，新开终端进入刚才下载的压缩包的目录，解压到jvm文件夹里面去，并且修改好名字方便管理<br><code>sudo tar zxvf ./jdk-8u101-linux-x64.tar.gz -C /usr/lib/jvm</code><br><code>cd /usr/lib/jvm</code><br><code>sudo mv jdk1.8.0_101/ jdk8</code></li>
+</ul>
+<ol>
+<li>配置环境变量（切换root）<br><code>vi  /etc/profile</code></li>
+</ol>
+<ul>
+<li>末尾添加<br><code>export JAVA_HOME=/usr/lib/jvm/jdk8</code><br><code>export JRE_HOME=${JAVA_HOME}/jre</code><br><code>export CLASSPATH=.:${JAVA_HOME}/lib/tools.jar:${JRE_HOME}/lib/dt.jar</code><br><code>export PATH=${JAVA_HOME}/bin:${JAVA_HOME}/jre/bin:$PATH</code></li>
+<li>保存退出，然后输入下面的命令来使之生效<br><code>source /etc/profile</code></li>
+</ul>
+<ol>
+<li>配置默认jdk</li>
+</ol>
+<ul>
+<li>由于一些Linux的发行版中已经存在默认的JDK，如OpenJDK等。所以为了使得我们刚才安装好的JDK版本能成为默认的JDK版本，我们还要进行下面的配置。<br>执行下面的命令：<br><code>sudo update-alternatives --config java</code><br><img src="http://upload-images.jianshu.io/upload_images/5678062-35872d811adec7b6.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="ubuntu下配置jdk-1.png"><br><code>sudo update-alternatives --config javac</code><br><img src="http://upload-images.jianshu.io/upload_images/5678062-b1df2c96450db096.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="ubuntu下配置jdk-2.png"><br><strong>如果非图片显示那样，重启电脑，继续本次步骤就好</strong></li>
+</ul>
+<ol>
+<li>测试是否成功</li>
+</ol>
+<ul>
+<li>新开一个终端输入<code>java -version</code></li>
+<li>若是显示以下–成功<br><img src="http://upload-images.jianshu.io/upload_images/5678062-4e344ef03040c76d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="ubuntu下配置jdk-3.png"></li>
+</ul>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/01/05/Ubuntu下配置jdk/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-MYSQL-安装与卸载" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -430,7 +520,7 @@
   <div class="outer">
     <div id="footer-info">
     	<div class="footer-left">
-    		&copy; 2017 姚培娟
+    		&copy; 2018 姚培娟
     	</div>
       	<div class="footer-right">
       		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
