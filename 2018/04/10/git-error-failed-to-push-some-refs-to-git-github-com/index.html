@@ -6,23 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://chujian1.github.io">
-  <title>Ubuntu下配置jdk | 初见_1</title>
+  <title>git error: failed to push some refs to &#39;git@github.com: | 初见_1</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="首先需要先去下载jdk压缩包 解压安装   将jdk安装到这个路径：/usr/lib/jvm。如果没有这个目录，就新建一个目录cd /usr/libsudo mkdir jvm 建立好之后，新开终端进入刚才下载的压缩包的目录，解压到jvm文件夹里面去，并且修改好名字方便管理sudo tar zxvf ./jdk-8u101-linux-x64.tar.gz -C /usr/lib/jvmcd /">
+  <meta name="description" content="1.原因远程仓库与本地内容不同步 2.解决git pull origin master将远程文件下载到本地并自动合并，使其同步之后继续你的操作">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Ubuntu下配置jdk">
-<meta property="og:url" content="http://chujian1.github.io/2018/01/05/Ubuntu下配置jdk/index.html">
+<meta property="og:title" content="git error: failed to push some refs to &#39;git@github.com:">
+<meta property="og:url" content="http://chujian1.github.io/2018/04/10/git-error-failed-to-push-some-refs-to-git-github-com/index.html">
 <meta property="og:site_name" content="初见_1">
-<meta property="og:description" content="首先需要先去下载jdk压缩包 解压安装   将jdk安装到这个路径：/usr/lib/jvm。如果没有这个目录，就新建一个目录cd /usr/libsudo mkdir jvm 建立好之后，新开终端进入刚才下载的压缩包的目录，解压到jvm文件夹里面去，并且修改好名字方便管理sudo tar zxvf ./jdk-8u101-linux-x64.tar.gz -C /usr/lib/jvmcd /">
+<meta property="og:description" content="1.原因远程仓库与本地内容不同步 2.解决git pull origin master将远程文件下载到本地并自动合并，使其同步之后继续你的操作">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/5678062-35872d811adec7b6.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/5678062-b1df2c96450db096.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/5678062-4e344ef03040c76d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:updated_time" content="2018-01-05T13:18:50.806Z">
+<meta property="og:updated_time" content="2018-04-10T02:39:02.253Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Ubuntu下配置jdk">
-<meta name="twitter:description" content="首先需要先去下载jdk压缩包 解压安装   将jdk安装到这个路径：/usr/lib/jvm。如果没有这个目录，就新建一个目录cd /usr/libsudo mkdir jvm 建立好之后，新开终端进入刚才下载的压缩包的目录，解压到jvm文件夹里面去，并且修改好名字方便管理sudo tar zxvf ./jdk-8u101-linux-x64.tar.gz -C /usr/lib/jvmcd /">
-<meta name="twitter:image" content="http://upload-images.jianshu.io/upload_images/5678062-35872d811adec7b6.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta name="twitter:title" content="git error: failed to push some refs to &#39;git@github.com:">
+<meta name="twitter:description" content="1.原因远程仓库与本地内容不同步 2.解决git pull origin master将远程文件下载到本地并自动合并，使其同步之后继续你的操作">
   
     <link rel="alternative" href="/atom.xml" title="初见_1" type="application/atom+xml">
   
@@ -158,54 +154,28 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-Ubuntu下配置jdk" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-git-error-failed-to-push-some-refs-to-git-github-com" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      Ubuntu下配置jdk
+      git error: failed to push some refs to &#39;git@github.com:
     </h1>
   
 
         
-        <a href="/2018/01/05/Ubuntu下配置jdk/" class="archive-article-date">
-  	<time datetime="2018-01-05T12:04:52.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-01-05</time>
+        <a href="/2018/04/10/git-error-failed-to-push-some-refs-to-git-github-com/" class="archive-article-date">
+  	<time datetime="2018-04-10T02:38:48.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-04-10</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <ol>
-<li>首先需要先去下载jdk压缩包</li>
-<li>解压安装</li>
-</ol>
-<ul>
-<li>将jdk安装到这个路径：/usr/lib/jvm。如果没有这个目录，就新建一个目录<br><code>cd /usr/lib</code><br><code>sudo mkdir jvm</code></li>
-<li>建立好之后，新开终端进入刚才下载的压缩包的目录，解压到jvm文件夹里面去，并且修改好名字方便管理<br><code>sudo tar zxvf ./jdk-8u101-linux-x64.tar.gz -C /usr/lib/jvm</code><br><code>cd /usr/lib/jvm</code><br><code>sudo mv jdk1.8.0_101/ jdk8</code></li>
-</ul>
-<ol>
-<li>配置环境变量（切换root）<br><code>vi  /etc/profile</code></li>
-</ol>
-<ul>
-<li>末尾添加<br><code>export JAVA_HOME=/usr/lib/jvm/jdk8</code><br><code>export JRE_HOME=${JAVA_HOME}/jre</code><br><code>export CLASSPATH=.:${JAVA_HOME}/lib/tools.jar:${JRE_HOME}/lib/dt.jar</code><br><code>export PATH=${JAVA_HOME}/bin:${JAVA_HOME}/jre/bin:$PATH</code></li>
-<li>保存退出，然后输入下面的命令来使之生效<br><code>source /etc/profile</code></li>
-</ul>
-<ol>
-<li>配置默认jdk</li>
-</ol>
-<ul>
-<li>由于一些Linux的发行版中已经存在默认的JDK，如OpenJDK等。所以为了使得我们刚才安装好的JDK版本能成为默认的JDK版本，我们还要进行下面的配置。<br>执行下面的命令：<br><code>sudo update-alternatives --config java</code><br><img src="http://upload-images.jianshu.io/upload_images/5678062-35872d811adec7b6.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="ubuntu下配置jdk-1.png"><br><code>sudo update-alternatives --config javac</code><br><img src="http://upload-images.jianshu.io/upload_images/5678062-b1df2c96450db096.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="ubuntu下配置jdk-2.png"><br><strong>如果非图片显示那样，重启电脑，继续本次步骤就好</strong></li>
-</ul>
-<ol>
-<li>测试是否成功</li>
-</ol>
-<ul>
-<li>新开一个终端输入<code>java -version</code></li>
-<li>若是显示以下–成功<br><img src="http://upload-images.jianshu.io/upload_images/5678062-4e344ef03040c76d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="ubuntu下配置jdk-3.png"></li>
-</ul>
+        <h3 id="1-原因"><a href="#1-原因" class="headerlink" title="1.原因"></a>1.原因</h3><p>远程仓库与本地内容不同步</p>
+<h3 id="2-解决"><a href="#2-解决" class="headerlink" title="2.解决"></a>2.解决</h3><p><code>git pull origin master</code>将远程文件下载到本地并自动合并，使其同步<br>之后继续你的操作</p>
 
       
 
@@ -285,7 +255,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://chujian1.github.io/2018/01/05/Ubuntu下配置jdk/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://chujian1.github.io/2018/04/10/git-error-failed-to-push-some-refs-to-git-github-com/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -299,18 +269,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2018/04/10/git-error-failed-to-push-some-refs-to-git-github-com/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          git error: failed to push some refs to &#39;git@github.com:
-        
-      </div>
-    </a>
   
-  
-    <a href="/2017/12/27/MYSQL-安装与卸载/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">MYSQL 安装与卸载</div>
+    <a href="/2018/01/05/Ubuntu下配置jdk/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Ubuntu下配置jdk</div>
       <i class="icon-circle-right"></i>
     </a>
   
